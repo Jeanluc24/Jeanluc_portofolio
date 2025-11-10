@@ -63,25 +63,25 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Network,
-      title: "Software Engineer Intern",
-      company: "MTN Rwanda",
-      period: "2024 - Present",
+      title: "ICT For Development Professional Intern",
+      company: "WaterAid Rwanda",
+      period: "2025 - Present",
       description:
         "Developing and maintaining scalable software solutions, focusing on backend systems and USSD based application.",
     },
     {
       icon: Layers,
-      title: "Frontend Developer",
-      company: "BAG Innovation",
-      period: "2023 - 2024",
+      title: "Tech Systems Expert",
+      company: "GardaWorld Rwanda",
+      period: "2022 - 2023",
       description:
         "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
     },
     {
       icon: Code2,
-      title: "UI/UX Designer",
-      company: "MediXR",
-      period: "2022 - 2023",
+      title: "Technical Professional",
+      company: "Ameki color Rwanda",
+      period: "2019 - 2020",
       description:
         "Designed intuitive user interfaces and experiences for healthcare applications, enhancing usability and accessibility.",
     },
