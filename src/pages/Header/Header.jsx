@@ -33,6 +33,12 @@ export default function Header() {
       text: "Education",
       path: "/education",
     },
+    {
+      id: "certificates",
+      icon: FaGraduationCap,
+      text: "Certificates",
+      path: "/certificates",
+    },
     { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
