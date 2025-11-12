@@ -33,16 +33,6 @@ const certficate = [
     githubLink: "#",
     liveLink: "#",
   },
-  {
-    title: "Fastfood 🍔",
-    description:
-      "Fastfood is a modern food delivery app that allows users to order their favorite meals from local restaurants. It features a sleek design, real-time order tracking, and secure payment options.",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/RFdMtXr8/Screenshot-2025-06-26-154704.png",
-    color: "white",
-    githubLink: "https://github.com/mugabe-rob/FUTURE_FS_02",
-    liveLink: "https://frontend-self-nine-87.vercel.app/",
-  },
 ];
 
 export default function Projects() {
