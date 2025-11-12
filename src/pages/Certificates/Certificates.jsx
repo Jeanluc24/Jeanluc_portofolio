@@ -2,36 +2,36 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 
-const projects = [
+const certficate = [
   {
-    title: "🚀 Medixr",
+    title: "Certificate of completion in Full-Stack Software Engineering  💻",
     description:
-      "I worked on the frontend part of Medixr, a healthcare platform that connects patients with doctors for online consultations. It features a user-friendly interface, secure video calls, and appointment scheduling.",
+      "Completed an intensive Full-Stack Software Engineering program covering HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Developed multiple projects demonstrating proficiency in both frontend and backend development.",
     src: "water.jpg",
-    link: "https://i.postimg.cc/hPzXFRRt/Screenshot-2025-06-26-161929.png",
+    link: "https://i.postimg.cc/50Hsf8Yw/Certificate-of-Completion-in-Full-stack-software-engineering.jpg",
     color: "#fff",
     githubLink: "#",
     liveLink: "https://medixr.org/",
   },
   {
-    title: "Volunteerfit!🌍",
+    title: "Certificate of completion in AI-Augmented Professional Skills 🤖",
     description:
-      "Volunteerfit! An app designed to connect volunteers with local organizations, allowing users to find and join volunteer opportunities in their area, track their volunteer hours, and make a positive impact in their communities.",
+      "Completed a comprehensive course on AI-Augmented Professional Skills, focusing on leveraging AI tools to enhance productivity, communication, and problem-solving in the workplace. Gained practical experience in integrating AI solutions into daily professional tasks.",
     src: "rock.jpg",
-    link: "https://i.postimg.cc/YC0bB9qm/Screenshot-2025-06-26-160813.png",
+    link: "https://i.postimg.cc/0QjMKf9v/Certificate-of-Completion-in-Ai-Augmented-Professional-Skills.jpg",
     color: "#5196fd",
-    githubLink: "https://github.com/BaRemy/volunteerfit",
-    liveLink: "https://baremy.github.io/volunteerfit/",
+    githubLink: "#",
+    liveLink: "#",
   },
   {
-    title: "My Portfolio" + " 🌟 ",
+    title: "Certificate of completion in Virtual Assistant Assistance Skills 🧑‍💼",
     description:
-      "A personal portfolio website showcasing my skills, projects, and experiences. Built with React, Tailwind CSS, and Framer Motion for smooth animations. Explore my work and connect with me!",
+      "Successfully completed a course in Virtual Assistant Assistance Skills, acquiring expertise in managing administrative tasks, scheduling, communication, and utilizing virtual assistant technologies to support business operations effectively.",
     src: "tree.jpg",
-    link: "https://i.postimg.cc/zGsVjtyP/Screenshot-2025-06-26-154129.png",
+    link: "https://i.postimg.cc/Dwz8M6bL/Certificate-of-Completion-in-Virtual-Assistant.jpg",
     color: "#8f89ff",
     githubLink: "#",
-    liveLink: "https://mugabe-robert.vercel.app/",
+    liveLink: "#",
   },
   {
     title: "Fastfood 🍔",
@@ -49,11 +49,11 @@ export default function Projects() {
   const [currentProject, setCurrentProject] = useState(0);
 
   const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % projects.length);
+    setCurrentProject((prev) => (prev + 1) % certficate.length);
   };
 
   const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrentProject((prev) => (prev - 1 + certficate.length) % certficate.length);
   };
 
   const goToProject = (index) => {
@@ -69,7 +69,7 @@ export default function Projects() {
             <AnimatePresence mode="wait">
               <Card
                 key={currentProject}
-                project={projects[currentProject]}
+                project={certficate[currentProject]}
                 projectIndex={currentProject}
               />
             </AnimatePresence>
@@ -86,7 +86,7 @@ export default function Projects() {
               className="group relative flex items-center gap-2 md:gap-3 px-4 py-2 md:px-8 md:py-4 bg-gradient-to-r from-black to-blue-600 rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-white-500/25"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              disabled={projects.length <= 1}
+              disabled={certficate.length <= 1}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
@@ -118,9 +118,9 @@ export default function Projects() {
 
             {/* Project Counter */}
             <div className="flex flex-col items-center gap-1 md:gap-2 px-3 md:px-6">
-              <div className="text-gray-400 text-xs md:text-sm font-medium">Project</div>
+              <div className="text-gray-400 text-xs md:text-sm font-medium">Certificate</div>
               <div className="text-white text-lg md:text-xl font-bold">
-                {currentProject + 1} / {projects.length}
+                {currentProject + 1} / {certficate.length}
               </div>
             </div>
 
@@ -130,7 +130,7 @@ export default function Projects() {
               className="group relative flex items-center gap-2 md:gap-3 px-4 py-2 md:px-8 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/25"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              disabled={projects.length <= 1}
+              disabled={certficate.length <= 1}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
@@ -163,7 +163,7 @@ export default function Projects() {
 
           {/* Mobile Dot Indicators (optional alternative navigation) */}
           <div className="flex justify-center items-center gap-2 mt-4 md:hidden">
-            {projects.map((_, index) => (
+            {certficate.map((_, index) => (
               <motion.button
                 key={index}
                 onClick={() => goToProject(index)}
@@ -206,11 +206,11 @@ function Card({ project, projectIndex }) {
         {/* Modern split card design */}
         <div className="w-full flex flex-col md:flex-row">
           {/* Image section - full width on mobile, 55% on desktop */}
-          <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
+          <div className="w-full md:w-[80%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden bg-zinc-800">
             <motion.img
               src={project.link}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               initial={{ scale: 1.1 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -233,7 +233,7 @@ function Card({ project, projectIndex }) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.4 }}
             >
-              Project {projectIndex + 1}
+              Certificate {projectIndex + 1}
             </motion.div>
           </div>
 
