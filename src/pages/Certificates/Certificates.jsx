@@ -9,9 +9,7 @@ const certficate = [
       "Completed an intensive Full-Stack Software Engineering program covering HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Developed multiple projects demonstrating proficiency in both frontend and backend development.",
     src: "water.jpg",
     link: "https://i.postimg.cc/50Hsf8Yw/Certificate-of-Completion-in-Full-stack-software-engineering.jpg",
-    color: "#fff",
-    githubLink: "#",
-    liveLink: "https://medixr.org/",
+    color: "#f4f6f7ff",
   },
   {
     title: "Certificate of completion in AI-Augmented Professional Skills 🤖",
@@ -19,9 +17,7 @@ const certficate = [
       "Completed a comprehensive course on AI-Augmented Professional Skills, focusing on leveraging AI tools to enhance productivity, communication, and problem-solving in the workplace. Gained practical experience in integrating AI solutions into daily professional tasks.",
     src: "rock.jpg",
     link: "https://i.postimg.cc/0QjMKf9v/Certificate-of-Completion-in-Ai-Augmented-Professional-Skills.jpg",
-    color: "#5196fd",
-    githubLink: "#",
-    liveLink: "#",
+    color: "#0357ffff",
   },
   {
     title: "Certificate of completion in Virtual Assistant Assistance Skills 🧑‍💼",
@@ -29,9 +25,7 @@ const certficate = [
       "Successfully completed a course in Virtual Assistant Assistance Skills, acquiring expertise in managing administrative tasks, scheduling, communication, and utilizing virtual assistant technologies to support business operations effectively.",
     src: "tree.jpg",
     link: "https://i.postimg.cc/Dwz8M6bL/Certificate-of-Completion-in-Virtual-Assistant.jpg",
-    color: "#8f89ff",
-    githubLink: "#",
-    liveLink: "#",
+    color: "#12bb06ff",
   },
 ];
 

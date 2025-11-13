@@ -4,44 +4,44 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "🚀 Medixr",
+    title: "Social Solidarity Fund 🤝",
     description:
-      "I worked on the frontend part of Medixr, a healthcare platform that connects patients with doctors for online consultations. It features a user-friendly interface, secure video calls, and appointment scheduling.",
+      "The Social Solidarity Fund is a comprehensive platform designed to facilitate social welfare initiatives. It provides tools for managing donations, tracking fund allocation, and supporting community projects aimed at improving social well-being.",
     src: "water.jpg",
-    link: "https://i.postimg.cc/hPzXFRRt/Screenshot-2025-06-26-161929.png",
+    link: "https://i.postimg.cc/VL6hZbpG/Screenshot-2025-10-18-023050.png",
     color: "#fff",
     githubLink: "#",
     liveLink: "https://medixr.org/",
   },
   {
-    title: "Volunteerfit!🌍",
+    title: "NadolEden Farm 🌾",
     description:
-      "Volunteerfit! An app designed to connect volunteers with local organizations, allowing users to find and join volunteer opportunities in their area, track their volunteer hours, and make a positive impact in their communities.",
+      "NadolEden Farm is an innovative agricultural management system designed to optimize farm operations. It offers features such as crop monitoring, resource management, and data analytics to enhance productivity and sustainability.",
     src: "rock.jpg",
-    link: "https://i.postimg.cc/YC0bB9qm/Screenshot-2025-06-26-160813.png",
+    link: "https://i.postimg.cc/HWbCm5k9/Screenshot-2025-11-13-091950.png",
     color: "#5196fd",
-    githubLink: "https://github.com/BaRemy/volunteerfit",
-    liveLink: "https://baremy.github.io/volunteerfit/",
+    githubLink: "#",
+    liveLink: "#",
   },
   {
     title: "My Portfolio" + " 🌟 ",
     description:
       "A personal portfolio website showcasing my skills, projects, and experiences. Built with React, Tailwind CSS, and Framer Motion for smooth animations. Explore my work and connect with me!",
     src: "tree.jpg",
-    link: "https://i.postimg.cc/zGsVjtyP/Screenshot-2025-06-26-154129.png",
+    link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
     color: "#8f89ff",
-    githubLink: "#",
-    liveLink: "https://mugabe-robert.vercel.app/",
+    githubLink: "https://github.com/Jeanluc24",
+    liveLink: "https://jeanluc-portofolio.vercel.app/",
   },
   {
-    title: "Fastfood 🍔",
+    title: "Staff Badges design 🎫",
     description:
-      "Fastfood is a modern food delivery app that allows users to order their favorite meals from local restaurants. It features a sleek design, real-time order tracking, and secure payment options.",
+      "A sleek and modern staff badge design project that combines functionality with aesthetics. The badges feature essential employee information, company branding, and security features to ensure a professional appearance.",
     src: "house.jpg",
-    link: "https://i.postimg.cc/RFdMtXr8/Screenshot-2025-06-26-154704.png",
+    link: "https://i.postimg.cc/C5szZxjy/Screenshot-2025-11-13-100438.png",
     color: "white",
-    githubLink: "https://github.com/mugabe-rob/FUTURE_FS_02",
-    liveLink: "https://frontend-self-nine-87.vercel.app/",
+    githubLink: "#",
+    liveLink: "#",
   },
 ];
 
