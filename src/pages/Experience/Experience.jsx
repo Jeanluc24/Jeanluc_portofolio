@@ -63,7 +63,7 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Network,
-      title: "ICT For Development Professional Intern",
+      title: "ICT For Development Professional Assistant",
       company: "WaterAid Rwanda",
       period: "2025 - Present",
       description:
