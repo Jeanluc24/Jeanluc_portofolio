@@ -25,7 +25,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #1e3a5f, #00b4a0, #1e3a5f);
+  background: linear-gradient(90deg, #60a5fa, #34d399, #60a5fa);
   background-size: 200% auto;
   animation: gradient-shift 4s linear infinite;
   -webkit-background-clip: text;
@@ -34,7 +34,7 @@
 
 .gradient-border {
   position: relative;
-  background: linear-gradient(45deg, #1e3a5f, #00b4a0);
+  background: linear-gradient(45deg, #60a5fa, #34d399);
   padding: 2px;
   border-radius: 0.75rem;
 }
@@ -50,14 +50,8 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background: linear-gradient(45deg, #1e3a5f, #00b4a0);
+  background: linear-gradient(45deg, #60a5fa, #34d399);
   transition: width 0.3s ease;
-}
-.typing-effect::after {
-  content: "|";
-  animation: blink 1s step-end infinite;
-  margin-left: 2px;
-  color: #00b4a0;
 }
 
 .nav-link:hover::after {
