@@ -25,7 +25,7 @@ pre[class*="language-"] {
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #091121;
+   background: #0a1a2f;
 }
 :not(pre) > code[class*="language-"] {
   padding: 0.1em;
