@@ -42,10 +42,10 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "ICT & Data Systems Professional",
-    "Digital Transformation Specialist",
-    "AI Tools & Systems Integrator",
-    "Full-Stack Developer",
+    "ICT Professional",
+    "Full-Stack Developer", "Data & AI Enthusiast",
+    "Systems Administrator", "Digital Transformation Advocate",
+    "IT Support Specialist",
   ];
 
   const [code] = useState(`
@@ -55,20 +55,16 @@ const profile = {
   location: 'Kigali, Rwanda',
   currentOrg: 'WaterAid Rwanda',
   focus: [
-    'Enterprise Systems Administration',
-    'AI Tools Adoption & Integration',
-    'Data Governance & Info Security',
-    'Field Data Systems (WASH Sector)',
+    'Enterprise Systems Administration', 'AI Tools Adoption & Integration',
+    'Data Governance & Info Security', 'Field Data Systems (WASH Sector)',
     'Full-Stack Web Development',
   ],
   certifications: [
-    'ISO/IEC 27001:2022 Lead Auditor',
-    'ALX Full-Stack Software Engineering',
-    'AI-Augmented Professional Skills',
-    'Cybersecurity Educator Professional',
+    'ISO/IEC 27001:2022 Lead Auditor', 'ALX Full-Stack Software Engineering',
+    'AI-Augmented Professional Skills', 'Cybersecurity Educator Professional',
   ],
-  openTo: 'Senior ICT & Data Transformation roles',
-  hireable: () => true,
+ openTo: 'Any IT role where I can build, improve, or transform systems',
+ hireable: () => true,
 };
   `);
 
