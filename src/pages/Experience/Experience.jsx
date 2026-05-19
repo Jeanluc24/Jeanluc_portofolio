@@ -67,7 +67,7 @@ const ExperienceSection = () => {
       company: "WaterAid Rwanda",
       period: "May 2025 – Present",
       description:
-        "Administer Microsoft 365 for 32+ staff managing identity, licensing, access controls, and security configurations. Led the internal Copilot AI rollout from awareness to active daily use across programme and admin teams. Built SharePoint-based knowledge platforms and supported the ARMANI Endline field data assessment using mWater across Bugesera District.",
+        "Administer Microsoft 365 for 32+ staff managing identity, licensing, access controls, and security configurations. Led the internal Copilot AI rollout from awareness to active daily use across programme and admin teams. helped in building SharePoint-based knowledge platforms and supported the ARMANI Endline field data assessment using mWater across Bugesera District.",
     },
     {
       icon: Layers,
