@@ -4,26 +4,34 @@ import PropTypes from "prop-types";
 
 const certficate = [
   {
-    title: "Certificate of completion in Full-Stack Software Engineering  💻",
+    title: "ISO/IEC 27001:2022 Lead Auditor 🛡️",
     description:
-      "Completed an intensive Full-Stack Software Engineering program covering HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Developed multiple projects demonstrating proficiency in both frontend and backend development.",
+      "Earned Lead Auditor certification in information security management systems — one of the most rigorous credentials in data governance and cybersecurity. Covers audit planning, risk assessment, control frameworks, and compliance evaluation against the ISO/IEC 27001:2022 standard. Directly applicable to building trustworthy data and AI governance frameworks in organizations.",
     src: "water.jpg",
+    link: "https://i.postimg.cc/J0Jv6Xr4/Lead-Auditor.png",
+    color: "#ef4444",
+  },
+  {
+    title: "Full-Stack Software Engineering 💻",
+    description:
+      "Completed ALX Africa's intensive, project-based software engineering programme covering frontend and backend development, Python, Node.js, React, REST APIs, and database management. Built and shipped multiple real-world applications across the programme. One of the most demanding engineering tracks in Africa, with a less than 30% completion rate.",
+    src: "rock.jpg",
     link: "https://i.postimg.cc/50Hsf8Yw/Certificate-of-Completion-in-Full-stack-software-engineering.jpg",
     color: "#f4f6f7ff",
   },
   {
-    title: "Certificate of completion in AI-Augmented Professional Skills 🤖",
+    title: "AI-Augmented Professional Skills 🤖",
     description:
-      "Completed a comprehensive course on AI-Augmented Professional Skills, focusing on leveraging AI tools to enhance productivity, communication, and problem-solving in the workplace. Gained practical experience in integrating AI solutions into daily professional tasks.",
-    src: "rock.jpg",
+      "Completed ALX Africa's certification in AI-Augmented Professional Skills — covering practical integration of AI tools into workplace workflows, prompt engineering, productivity optimization, and responsible AI use. Applied directly at WaterAid Rwanda during the Microsoft Copilot adoption rollout across programme and admin teams.",
+    src: "tree.jpg",
     link: "https://i.postimg.cc/0QjMKf9v/Certificate-of-Completion-in-Ai-Augmented-Professional-Skills.jpg",
     color: "#0357ffff",
   },
   {
-    title: "Certificate of completion in Virtual Assistant Assistance Skills 🧑‍💼",
+    title: "Certified Cybersecurity Educator Professional (CCEP) 🔐",
     description:
-      "Successfully completed a course in Virtual Assistant Assistance Skills, acquiring expertise in managing administrative tasks, scheduling, communication, and utilizing virtual assistant technologies to support business operations effectively.",
-    src: "tree.jpg",
+      "Certified to design and deliver cybersecurity awareness training programmes. Covers security awareness curriculum development, threat communication, social engineering defence, and organizational security culture — skills applied directly in staff training and IT policy work at WaterAid Rwanda.",
+    src: "house.jpg",
     link: "https://i.postimg.cc/Dwz8M6bL/Certificate-of-Completion-in-Virtual-Assistant.jpg",
     color: "#12bb06ff",
   },
