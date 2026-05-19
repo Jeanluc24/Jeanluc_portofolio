@@ -18,7 +18,7 @@ const projects = [
     description:
       "Built and maintained an internal SharePoint-based knowledge platform used by 32+ staff across WaterAid Rwanda for document management, policy storage, and cross-team collaboration. Replaced fragmented email-based file sharing with a structured, searchable organizational knowledge base.",
     src: "water.jpg",
-    link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
+    link: "https://i.postimg.cc/ydnKH529/Screenshot-2026-05-19-164949.png",
     color: "#0ea5e9",
     githubLink: "#",
     liveLink: "#",
