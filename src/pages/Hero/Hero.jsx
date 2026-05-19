@@ -63,7 +63,7 @@ const profile = {
     'ISO/IEC 27001:2022 Lead Auditor', 'ALX Full-Stack Software Engineering',
     'AI-Augmented Professional Skills', 'Cybersecurity Educator Professional',
   ],
- openTo: 'Any IT role where I can build, improve, or transform systems',
+ openTo: 'ICT roles in systems, development, data & digital operations',
  hireable: () => true,
 };
   `);
