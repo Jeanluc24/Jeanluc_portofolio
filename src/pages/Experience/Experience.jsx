@@ -63,27 +63,27 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Network,
-      title: "ICT For Development Professional Assistant",
+      title: "ICT for Development Professional Assistant",
       company: "WaterAid Rwanda",
-      period: "2025 - Present",
+      period: "May 2025 – Present",
       description:
-        "Developing and maintaining scalable software solutions, focusing on backend systems and USSD based application.",
+        "Administer Microsoft 365 for 32+ staff managing identity, licensing, access controls, and security configurations. Led the internal Copilot AI rollout from awareness to active daily use across programme and admin teams. Built SharePoint-based knowledge platforms and supported the ARMANI Endline field data assessment using mWater across Bugesera District.",
     },
     {
       icon: Layers,
       title: "Tech Systems Expert",
       company: "GardaWorld Rwanda",
-      period: "2022 - 2023",
+      period: "Jan 2022 – Jan 2023",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        "Reduced infrastructure downtime by 45% through a structured preventive maintenance programme, improving reliability for security operations that required continuous uptime. Delivered client-side training that measurably reduced repeat support requests and maintained comprehensive system documentation across shift transitions.",
     },
     {
       icon: Code2,
-      title: "Technical Professional",
-      company: "Ameki color Rwanda",
-      period: "2019 - 2020",
+      title: "IT Systems Operator",
+      company: "Ameki Color Rwanda",
+      period: "May 2019 – Dec 2020",
       description:
-        "Designed intuitive user interfaces and experiences for healthcare applications, enhancing usability and accessibility.",
+        "Kept production systems and enterprise software running in a manufacturing environment where uptime directly affected output. Developed staff user guides and delivered training on internal systems, improving adoption and reducing operator errors. Implemented access controls and basic security hardening across company hardware.",
     },
   ];
 
