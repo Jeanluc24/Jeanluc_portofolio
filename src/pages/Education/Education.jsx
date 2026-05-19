@@ -12,24 +12,24 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "ALX Software Engineering",
-      school: "African Leadership Experience",
-      mascot: "📘",
-      year: "2022-2024",
-      achievements: ["GPA: 4.89", "Course: Backend Development"],
-      skills: ["Backend Development", "Python", "Project Management", "Agile Methodologies"],
-      description:
-        "Completed a rigorous software engineering program focused on backend development, Python programming, and project management methodologies.",
-    },
-    {
-      degree: "Bsc in Business Information Technology",
+      degree: "BSc Business Information Technology",
       school: "University of Rwanda",
       mascot: "📗",
-      year: "2022-2025",
-      achievements: ["GPA: 3.38", "Subject: Programming"],
-      skills: ["Javascript", "Data Analysis", "Project Management", "Communication Skills"],
+      year: "2022 – 2025",
+      achievements: ["GPA: 3.38", "Focus: Data Systems & Programming"],
+      skills: ["Information Systems", "Data Analysis", "Database Management", "Business Technology", "Project Management"],
       description:
-        "Expects to graduate with a Bachelor in Business Information Technology, specializing in programming and data analysis, with a strong emphasis on problem-solving and communication skills.",
+        "Completed a Bachelor's in Business Information Technology, building a strong foundation in information systems, data management, and business-aligned technology solutions. Coursework spanned database design, system analysis, and programming fundamentals applied to real organizational challenges.",
+    },
+    {
+      degree: "Full-Stack Software Engineering",
+      school: "ALX Africa",
+      mascot: "📘",
+      year: "2023 – 2025",
+      achievements: ["GPA: 4.89", "Specialization: Backend & AI Tools"],
+      skills: ["Python", "Node.js", "React", "REST APIs", "AI-Augmented Skills", "Agile Methodologies"],
+      description:
+        "Completed an intensive, project-based software engineering programme covering full-stack development, backend architecture, Python scripting, and AI-augmented professional skills. Built and shipped multiple real-world applications across the programme, graduating with a certification in AI-Augmented Professional Skills alongside the core engineering track.",
     },
   ];
 
@@ -75,7 +75,7 @@ const EducationSection = () => {
             Education Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shaped my innovative thinking and growth.
+            A foundation in both business technology and software engineering — built to understand systems from both sides.
           </p>
         </motion.div>
 
