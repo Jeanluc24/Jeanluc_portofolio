@@ -98,7 +98,7 @@ export default function Contact() {
       } else if (error.name === 'AbortError') {
         setStatus("Request timed out. Please try again.");
       } else {
-        setStatus("Something went wrong. Please try again or contact me directly at mugaberoberto007@gmail.com");
+        setStatus("Something went wrong. Please try again or contact me directly at musejnluc02@gmail.com");
       }
     }
   };
@@ -118,7 +118,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-gray-300 text-lg">
-                  Have a question or want to work together? Drop me a message!
+                  Open to senior ICT, data, and digital transformation roles in Rwanda and beyond. Drop me a message or reach out directly.
                 </p>
               </div>
 
