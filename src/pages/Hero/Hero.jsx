@@ -1,371 +1,299 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
+import Prism from "prismjs";
+import "prismjs/components/prism-javascript";
+import "@/assets/css/tomorrow.css";
+import Meteors from "@/components/ui/meteors";
+import PortfolioPage from "@/pages/About/About";
+import SparklesText from "@/components/ui/sparkles-text";
+import { FlipWords } from "@/components/ui/flip-words";
 
-const projects = [
-  {
-    title: "Nadol Eden Farm 🌾",
-    description:
-      "Designed and developed the full website for a Rwanda-based organic agriculture venture — handling brand identity, responsive UI, and front-end development end-to-end. Delivered as a live commercial product with custom favicon, logo integration, and multi-page responsive layout.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/h4HyGMgt/Screenshot-2026-05-19-164617.png",
-    color: "#5196fd",
-    githubLink: "https://github.com/Jeanluc24",
-    liveLink: "https://nadoledenfarm.com",
-  },
-  {
-    title: "WaterAid SharePoint Platform 🏢",
-    description:
-      "Built and maintained an internal SharePoint-based knowledge platform used by 32+ staff across WaterAid Rwanda for document management, policy storage, and cross-team collaboration. Replaced fragmented email-based file sharing with a structured, searchable organizational knowledge base.",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/ydnKH529/Screenshot-2026-05-19-164949.png",
-    color: "#0ea5e9",
-    githubLink: "#",
-    liveLink: "#",
-  },
-  {
-    title: "Microsoft Copilot Rollout 🤖",
-    description:
-      "Led the internal adoption of Microsoft Copilot at WaterAid Rwanda from planning and demonstrations to hands-on staff training across programme and administration teams. Moved adoption from zero to active daily use, shifting how teams draft documents, search for information, and collaborate.",
-    src: "tree.jpg",
-    link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
-    color: "#7c3aed",
-    githubLink: "#",
-    liveLink: "#",
-  },
-  {
-    title: "Personal Portfolio 🌟",
-    description:
-      "Built this portfolio from scratch using React, Tailwind CSS, and Framer Motion. Architected with reusable components, smooth page transitions, and full mobile responsiveness. Deployed on Vercel with continuous deployment from GitHub.",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
-    color: "#8f89ff",
-    githubLink: "https://github.com/Jeanluc24",
-    liveLink: "https://jeanluc-portofolio.vercel.app/",
-  },
-];
+// Grid Background - Replacing the HexagonBackground
+const GridBackground = () => {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-25">
+      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          className="absolute inset-0"
+        >
+          <pattern
+            id="grid"
+            width="30"
+            height="30"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              width="40"
+              height="40"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
+              className="opacity-50 animate-gridPulse"
+            />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+    </div>
+  );
+};
 
-export default function Projects() {
-  const [currentProject, setCurrentProject] = useState(0);
+export default function Hero() {
+  const words = [
+    "ICT & Data Systems Professional",
+    "Digital Transformation Specialist",
+    "AI Tools & Systems Integrator",
+    "Full-Stack Developer",
+  ];
 
-  const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % projects.length);
-  };
+  const [code] = useState(`
+const profile = {
+  name: 'Jean Luc MUSENGAYEZU',
+  role: 'ICT for Development | Data & AI Systems',
+  location: 'Kigali, Rwanda',
+  currentOrg: 'WaterAid Rwanda',
+  focus: [
+    'Enterprise Systems Administration','AI Tools Adoption & Integration',
+    'Data Governance & Info Security', 'Field Data Systems (WASH Sector)',
+    'Full-Stack Web Development',
+  ],
+  certifications: [
+    'ISO/IEC 27001:2022 Lead Auditor', 'ALX Full-Stack Software Engineering',
+    'AI-Augmented Professional Skills', 'Cybersecurity Educator Professional',
+  ],
+  openTo: 'IT Ethusiast',
+  hireable: () => true,
+};
+  `);
 
-  const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
-  };
+  useEffect(() => {
+    Prism.highlightAll();
 
-  const goToProject = (index) => {
-    setCurrentProject(index);
-  };
+    // Add CSS animation for grid and dots
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes gridPulse {
+        0%, 100% { opacity: 0.1; }
+        50% { opacity: 0.3; }
+      }
+      
+      @keyframes dotPulse {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 0.5; transform: scale(1.2); }
+      }
+      
+      /* Media query for 1366x768 resolution */
+      @media screen and (width: 1366px) and (height: 768px), 
+             screen and (width: 1367px) and (height: 768px),
+             screen and (width: 1368px) and (height: 769px) {
+        .hero {
+          padding-top: 12rem !important;
+        }
+        .hero .container {
+          padding-top: 10rem !important;
+          margin-top: 5rem !important;
+        }
+        .hero-section-padding {
+          padding-top: 12rem !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Apply extra padding for 1366x768 resolution
+    const checkResolution = () => {
+      const isTargetResolution =
+        window.innerWidth >= 1360 &&
+        window.innerWidth <= 1370 &&
+        window.innerHeight >= 760 &&
+        window.innerHeight <= 775;
+
+      if (isTargetResolution) {
+        document.documentElement.style.setProperty(
+          "--hero-padding-top",
+          "12rem"
+        );
+      } else {
+        document.documentElement.style.setProperty("--hero-padding-top", "0");
+      }
+    };
+
+    checkResolution();
+    window.addEventListener("resize", checkResolution);
+
+    return () => {
+      document.head.removeChild(style);
+      window.removeEventListener("resize", checkResolution);
+    };
+  }, [code]);
 
   return (
-    <main className="bg-black min-h-screen">
-      <section className="text-white w-full bg-slate-950 min-h-screen flex flex-col">
-        {/* Project Display Area */}
-        <div className="flex-1 flex items-center justify-center py-8">
-          <div className="w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] relative">
-            <AnimatePresence mode="wait">
-              <Card
-                key={currentProject}
-                project={projects[currentProject]}
-                projectIndex={currentProject}
-              />
-            </AnimatePresence>
+    <>
+      <main className="bg-[#020617] text-white min-h-screen">
+        <section
+          className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
+          style={{ paddingTop: "var(--hero-padding-top, 0)" }}
+        >
+          <div className="absolute inset-0"></div>
+
+          {/* Choose one of these background options */}
+          <GridBackground />
+
+          {/* Or keep the original backgrounds if you prefer */}
+          {/* <HexagonBackground /> */}
+          {/* <AnimatedGrid /> */}
+          {/* <DotBackground /> */}
+
+          {/* Meteors Effect */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <Meteors number={10} />
           </div>
-        </div>
 
-        {/* Navigation Controls */}
-        <div className="pb-4 md:pb-8">
-          {/* Navigation Buttons */}
-          <div className="flex justify-center items-center gap-3 md:gap-8 px-4">
-            {/* Previous Button */}
-            <motion.button
-              onClick={prevProject}
-              className="group relative flex items-center gap-2 md:gap-3 px-4 py-2 md:px-8 md:py-4 bg-gradient-to-r from-black to-blue-600 rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-white-500/25"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              disabled={projects.length <= 1}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              <motion.div
-                className="relative z-10 flex items-center gap-2 md:gap-3"
-                whileHover={{ x: -3 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  className="md:w-5 md:h-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+          {/* Main content container */}
+          <div
+            className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28"
+            style={{
+              paddingTop:
+                window.innerWidth >= 1360 &&
+                window.innerWidth <= 1370 &&
+                window.innerHeight >= 760 &&
+                window.innerHeight <= 775
+                  ? "12rem"
+                  : "",
+            }}
+          >
+            {/* Left column - Text content */}
+            <div className="w-full lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
+              {/* Decorative blurs */}
+              <div className="absolute hidden lg:-top-20 lg:-left-20 lg:block w-48 h-48 lg:w-64 lg:h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+              <div className="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
+
+              {/* Welcome badge */}
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
+                <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+                <span className="text-gray-300 text-xs sm:text-sm font-medium">
+                  Welcome to my portfolio
+                </span>
+              </div>
+
+              {/* Name section */}
+              <div className="relative mb-6 sm:mb-8">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                  <SparklesText text="Hello" />
+                  <span className="relative inline-block">
+                    I&apos;m
+                    <span className="typing-effect gradient-text">
+                      {" "}
+                      Jean Luc MUSENGAYEZU
+                    </span>
+                  </span>
+                </h1>
+                <div className="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+              </div>
+
+              {/* Role badge */}
+              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
+                <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                <span>
+                  <FlipWords
+                    className={"text-lg sm:text-xl text-blue-400 font-medium"}
+                    words={words}
+                  />
+                </span>
+              </div>
+
+              {/* Description */}
+              <div className="relative mb-8 sm:mb-12 max-w-xl">
+                <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
+                  ICT & Data Systems Professional based in Kigali, Rwanda. Building technology that drives real organizational impact.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
+                {/* View Projects Button */}
+                <a
+                  href="https://github.com/Jeanluc24"
+                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
-                  <path d="M19 12H5M12 19l-7-7 7-7" />
-                </svg>
-                <span className="text-white font-semibold text-sm md:text-lg">Prev</span>
-              </motion.div>
-              
-              {/* Ripple effect */}
-              <div className="absolute inset-0 bg-white opacity-0 group-active:opacity-20 rounded-full transition-opacity duration-150" />
-            </motion.button>
+                  <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
+                    <span className="relative flex items-center justify-center gap-2 text-white font-medium">
+                      <span>Learn More</span>
+                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                    </span>
+                  </span>
+                </a>
 
-            {/* Project Counter */}
-            <div className="flex flex-col items-center gap-1 md:gap-2 px-3 md:px-6">
-              <div className="text-gray-400 text-xs md:text-sm font-medium">Project</div>
-              <div className="text-white text-lg md:text-xl font-bold">
-                {currentProject + 1} / {projects.length}
+                {/* Contact Button */}
+                <a
+                  href="images/Jean_Luc_MUSENGAYEZU_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Jean_Luc_MUSENGAYEZU_Resume.pdf"
+                  className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                >
+                  <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
+                      <span>Get Resume</span>
+                      <i className="fas fa-download transform transition-all duration-300 group-hover:rotate-12"></i>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              {/* Floating badges */}
+              <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
+                <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
+                  <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI
+                  Magic
+                </div>
+              </div>
+              <div className="hidden lg:block absolute right-10 top-20 animate-float">
+                <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
+                  <i className="fas fa-code"></i>&nbsp;&nbsp;Clean Code
+                </div>
+              </div>
+              <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
+                <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
+                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Innovation
+                </div>
               </div>
             </div>
 
-            {/* Next Button */}
-            <motion.button
-              onClick={nextProject}
-              className="group relative flex items-center gap-2 md:gap-3 px-4 py-2 md:px-8 md:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/25"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              disabled={projects.length <= 1}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              <motion.div
-                className="relative z-10 flex items-center gap-2 md:gap-3"
-                whileHover={{ x: 3 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <span className="text-white font-semibold text-sm md:text-lg">Next</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  className="md:w-5 md:h-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </motion.div>
-              
-              {/* Ripple effect */}
-              <div className="absolute inset-0 bg-white opacity-0 group-active:opacity-20 rounded-full transition-opacity duration-150" />
-            </motion.button>
-          </div>
-
-          {/* Mobile Dot Indicators (optional alternative navigation) */}
-          <div className="flex justify-center items-center gap-2 mt-4 md:hidden">
-            {projects.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => goToProject(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentProject 
-                    ? 'bg-white scale-125' 
-                    : 'bg-gray-600 hover:bg-gray-400'
-                }`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-
-function Card({ project, projectIndex }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -50, scale: 0.9 }}
-      transition={{ 
-        duration: 0.5, 
-        ease: [0.4, 0, 0.2, 1],
-        scale: { duration: 0.3 }
-      }}
-      className="w-full"
-    >
-      <motion.div
-        className="w-full bg-zinc-900 rounded-2xl overflow-hidden shadow-xl"
-        whileHover={{
-          y: -8,
-          transition: { duration: 0.3 },
-        }}
-      >
-        {/* Modern split card design */}
-        <div className="w-full flex flex-col md:flex-row">
-          {/* Image section - full width on mobile, 55% on desktop */}
-          <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
-            <motion.img
-              src={project.link}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              initial={{ scale: 1.1 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-            />
-
-            {/* Colored overlay on hover */}
-            <motion.div
-              className="absolute inset-0"
-              style={{ backgroundColor: project.color, mixBlendMode: "overlay" }}
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 0.3 }}
-              transition={{ duration: 0.3 }}
-            />
-
-            {/* Project number */}
-            <motion.div
-              className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-            >
-              Project {projectIndex + 1}
-            </motion.div>
-          </div>
-
-          {/* Content section - full width on mobile, 45% on desktop */}
-          <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-            >
-              <div className="flex items-center gap-3 mb-4 md:mb-6">
-                <motion.div
-                  className="w-2 h-2 md:w-3 md:h-3 rounded-full"
-                  style={{ backgroundColor: project.color }}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.3, type: "spring", stiffness: 400 }}
-                />
-                <motion.div 
-                  className="h-[1px] bg-gray-600"
-                  initial={{ width: 0 }}
-                  animate={{ width: "3rem" }}
-                  transition={{ delay: 0.4, duration: 0.5 }}
-                />
-              </div>
-
-              <motion.h2 
-                className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                {project.title}
-              </motion.h2>
-              <motion.p 
-                className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                {project.description}
-              </motion.p>
-            </motion.div>
-
-            <motion.div 
-              className="mt-4 md:mt-auto pt-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
-
-              <div className="flex items-center gap-4">
-                {/* GitHub Link */}
-                <motion.a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={project.color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color: project.color }}
-                  >
-                    Code
-                  </span>
-                </motion.a>
-
-                {/* Live Link */}
-                <motion.a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={project.color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color: project.color }}
-                  >
-                    Live
-                  </span>
-                </motion.a>
+            {/* Right column - Code window */}
+            <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
+              <div className="gradient-border">
+                <div className="code-window bg-[#091121]">
+                  <div className="window-header">
+                    <div className="window-dot bg-red-500"></div>
+                    <div className="window-dot bg-yellow-500"></div>
+                    <div className="window-dot bg-green-500"></div>
+                    <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
+                      <i className="fas fa-code"></i>
+                      developer.js
+                    </span>
+                  </div>
+                  <pre className="language-javascript">
+                    <code className="language-javascript">{code}</code>
+                  </pre>
                 </div>
-            </motion.div>
+              </div>
+            </div>
           </div>
+        </section>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center gap-2">
+          <span className="text-gray-400 text-sm flex items-center gap-2">
+            <i className="fas fa-mouse text-blue-400"></i>
+            About me
+          </span>
+          <i className="fas fa-chevron-down text-blue-400 text-xl"></i>
         </div>
-      </motion.div>
-    </motion.div>
+        <PortfolioPage />
+      </main>
+    </>
   );
 }
-
-// Add PropTypes validation
-Card.propTypes = {
-  project: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-    githubLink: PropTypes.string.isRequired,
-    liveLink: PropTypes.string.isRequired,
-  }).isRequired,
-  projectIndex: PropTypes.number.isRequired,
-};
