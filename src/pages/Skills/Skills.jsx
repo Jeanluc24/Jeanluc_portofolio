@@ -1,15 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
-import { Code2, Database, Layout, Cpu, Cloud, Shield, Server } from "lucide-react";
+import { Code2, Paintbrush, Database, Layout, Cpu, Cloud } from "lucide-react";
 import PropTypes from 'prop-types';
 import {
   FaReact,
   FaNodeJs,
   FaPython,
+  FaDocker,
   FaGitAlt,
   FaLinux,
-  FaMicrosoft,
+  FaFigma,
+  FaAws,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -17,16 +19,18 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiMongodb,
+  SiGraphql,
+  SiJest,
+  SiWebpack,
+  SiRedux,
+  SiFirebase,
   SiVercel,
   SiVite,
-  SiMysql,
-  SiPowerbi,
-  SiSharepoint,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
-import { BsFileEarmarkCode, BsGrid1X2, BsShieldCheck } from "react-icons/bs";
-import { MdOutlineManageAccounts } from "react-icons/md";
-import { FcWorkflow, FcDataConfiguration } from "react-icons/fc";
+import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
+import { MdAnimation } from "react-icons/md";
+import { FcWorkflow } from "react-icons/fc";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
@@ -75,15 +79,15 @@ SkillCard.propTypes = {
 const SkillsSection = () => {
   const skillCategories = [
     {
-      icon: Server,
+      icon: Layout,
       title: "ICT & Enterprise Systems",
       color: "text-blue-400",
       skills: [
-        { name: "Microsoft 365", icon: <FaMicrosoft className="w-4 h-4 text-[#0078D4]" /> },
-        { name: "SharePoint", icon: <SiSharepoint className="w-4 h-4 text-[#0078D4]" /> },
-        { name: "Azure AD / Entra", icon: <FaMicrosoft className="w-4 h-4 text-[#00BCF2]" /> },
-        { name: "Identity & Access Mgmt", icon: <MdOutlineManageAccounts className="w-4 h-4 text-[#60A5FA]" /> },
-        { name: "IT Infrastructure", icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" /> },
+        { name: "Microsoft 365", icon: <BsGrid1X2 className="w-4 h-4 text-[#0078D4]" /> },
+        { name: "SharePoint", icon: <BsGrid1X2 className="w-4 h-4 text-[#0078D4]" /> },
+        { name: "Azure AD / Entra ID", icon: <BsGrid1X2 className="w-4 h-4 text-[#00BCF2]" /> },
+        { name: "Identity & Access Mgmt", icon: <FcWorkflow className="w-4 h-4" /> },
+        { name: "IT Infrastructure", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#9CA3AF]" /> },
         { name: "Multi-site IT Support", icon: <FcWorkflow className="w-4 h-4" /> },
       ],
     },
@@ -92,22 +96,22 @@ const SkillsSection = () => {
       title: "Data & AI Tools",
       color: "text-teal-400",
       skills: [
-        { name: "Microsoft Copilot", icon: <FaMicrosoft className="w-4 h-4 text-[#7B68EE]" /> },
-        { name: "Power BI", icon: <SiPowerbi className="w-4 h-4 text-[#F2C811]" /> },
-        { name: "SQL / MySQL", icon: <SiMysql className="w-4 h-4 text-[#4479A1]" /> },
+        { name: "Microsoft Copilot", icon: <MdAnimation className="w-4 h-4 text-[#7B68EE]" /> },
+        { name: "Power BI", icon: <BsGrid1X2 className="w-4 h-4 text-[#F2C811]" /> },
+        { name: "SQL / MySQL", icon: <SiPostgresql className="w-4 h-4 text-[#4479A1]" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="w-4 h-4 text-[#336791]" /> },
-        { name: "Data Collection (mWater)", icon: <FcDataConfiguration className="w-4 h-4" /> },
-        { name: "Data Governance", icon: <BsShieldCheck className="w-4 h-4 text-[#10B981]" /> },
+        { name: "Data Collection (mWater)", icon: <FcWorkflow className="w-4 h-4" /> },
+        { name: "Data Governance", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#10B981]" /> },
       ],
     },
     {
-      icon: Shield,
+      icon: Paintbrush,
       title: "Security & Governance",
       color: "text-red-400",
       skills: [
-        { name: "ISO/IEC 27001:2022", icon: <BsShieldCheck className="w-4 h-4 text-[#EF4444]" /> },
-        { name: "Lead Auditing", icon: <BsShieldCheck className="w-4 h-4 text-[#F87171]" /> },
-        { name: "Cybersecurity Awareness", icon: <BsShieldCheck className="w-4 h-4 text-[#FCA5A5]" /> },
+        { name: "ISO/IEC 27001:2022", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#EF4444]" /> },
+        { name: "Lead Auditing", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#F87171]" /> },
+        { name: "Cybersecurity Awareness", icon: <BsGrid1X2 className="w-4 h-4 text-[#FCA5A5]" /> },
         { name: "IT Policy & Documentation", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#9CA3AF]" /> },
       ],
     },
@@ -146,7 +150,8 @@ const SkillsSection = () => {
         { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
         { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
         { name: "GitHub", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
-        { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
+        { name: "Docker", icon: <FaDocker className="w-4 h-4 text-[#2496ED]" /> },
+        { name: "Workflow Automation", icon: <FcWorkflow className="w-4 h-4" /> },
       ],
     },
   ];
