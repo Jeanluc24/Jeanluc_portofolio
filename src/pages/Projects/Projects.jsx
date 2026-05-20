@@ -4,44 +4,44 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "Social Solidarity Fund 🤝",
+    title: "Nadol Eden Farm 🌾",
     description:
-      "The Social Solidarity Fund is a comprehensive platform designed to facilitate social welfare initiatives. It provides tools for managing donations, tracking fund allocation, and supporting community projects aimed at improving social well-being.",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/VL6hZbpG/Screenshot-2025-10-18-023050.png",
-    color: "#fff",
-    githubLink: "#",
-    liveLink: "https://medixr.org/",
+      "Designed and developed the full website for a Rwanda-based organic agriculture venture — handling brand identity, responsive UI, and front-end development end-to-end. Delivered as a live commercial product with custom favicon, logo integration, and multi-page responsive layout.",
+    src: "rock.jpg",
+    link: "https://i.postimg.cc/h4HyGMgt/Screenshot-2026-05-19-164617.png",
+    color: "#5196fd",
+    githubLink: "https://github.com/Jeanluc24",
+    liveLink: "https://nadoledenfarm.com",
   },
   {
-    title: "NadolEden Farm 🌾",
+    title: "WaterAid SharePoint Platform 🏢",
     description:
-      "NadolEden Farm is an innovative agricultural management system designed to optimize farm operations. It offers features such as crop monitoring, resource management, and data analytics to enhance productivity and sustainability.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/HWbCm5k9/Screenshot-2025-11-13-091950.png",
-    color: "#5196fd",
+      "Built and maintained an internal SharePoint-based knowledge platform used by 32+ staff across WaterAid Rwanda for document management, policy storage, and cross-team collaboration. Replaced fragmented email-based file sharing with a structured, searchable organizational knowledge base.",
+    src: "water.jpg",
+    link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
+    color: "#0ea5e9",
     githubLink: "#",
     liveLink: "#",
   },
   {
-    title: "My Portfolio" + " 🌟 ",
+    title: "Microsoft Copilot Rollout 🤖",
     description:
-      "A personal portfolio website showcasing my skills, projects, and experiences. Built with React, Tailwind CSS, and Framer Motion for smooth animations. Explore my work and connect with me!",
+      "Led the internal adoption of Microsoft Copilot at WaterAid Rwanda from planning and demonstrations to hands-on staff training across programme and administration teams. Moved adoption from zero to active daily use, shifting how teams draft documents, search for information, and collaborate.",
     src: "tree.jpg",
+    link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
+    color: "#7c3aed",
+    githubLink: "#",
+    liveLink: "#",
+  },
+  {
+    title: "Personal Portfolio 🌟",
+    description:
+      "Built this portfolio from scratch using React, Tailwind CSS, and Framer Motion. Architected with reusable components, smooth page transitions, and full mobile responsiveness. Deployed on Vercel with continuous deployment from GitHub.",
+    src: "house.jpg",
     link: "https://i.postimg.cc/Z5BBYVBw/Screenshot-2025-11-13-091611.png",
     color: "#8f89ff",
     githubLink: "https://github.com/Jeanluc24",
     liveLink: "https://jeanluc-portofolio.vercel.app/",
-  },
-  {
-    title: "Staff Badges design 🎫",
-    description:
-      "A sleek and modern staff badge design project that combines functionality with aesthetics. The badges feature essential employee information, company branding, and security features to ensure a professional appearance.",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/C5szZxjy/Screenshot-2025-11-13-100438.png",
-    color: "white",
-    githubLink: "#",
-    liveLink: "#",
   },
 ];
 
