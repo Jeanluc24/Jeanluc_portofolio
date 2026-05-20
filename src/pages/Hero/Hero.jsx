@@ -42,29 +42,40 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "ICT & Data Systems Professional",
-    "Digital Transformation Specialist",
-    "AI Tools & Systems Integrator",
-    "Full-Stack Developer",
+    "Full-Stack Developer & UI/UX Enthusiast",
+    "Lifelong Learner & Problem Solver",
+    "MERN Stack Developer",
+    "Software Project Manager",
   ];
 
   const [code] = useState(`
 const profile = {
-  name: 'Jean Luc MUSENGAYEZU',
-  role: 'ICT for Development | Data & AI Systems',
-  location: 'Kigali, Rwanda',
-  currentOrg: 'WaterAid Rwanda',
-  focus: [
-    'Enterprise Systems Administration','AI Tools Adoption & Integration',
-    'Data Governance & Info Security', 'Field Data Systems (WASH Sector)',
-    'Full-Stack Web Development',
-  ],
-  certifications: [
-    'ISO/IEC 27001:2022 Lead Auditor', 'ALX Full-Stack Software Engineering',
-    'AI-Augmented Professional Skills', 'Cybersecurity Educator Professional',
-  ],
-  openTo: 'IT Ethusiast',
-  hireable: () => true,
+    name: 'Jean Luc MUSENGAYEZU',
+    title: 'Full-Stack Software Developer | IT Enthusiast | ICT & Data Systems Specialist | 
+    Supporting Digital Solutions for NGOs | Passionate About Tech for Social Impact| IT Associate|
+    Aspiring MIS Officer',
+    location: 'Kigali, Rwanda',
+    Seniority: 'Mid-Level',
+    skills: [
+        'React', 'Next.js', 'JavaScript', 'Node.js', 'Express.js',
+        'MySQL', 'MongoDB', 'PostgreSQL', 'AWS', 'TypeScript',
+        'GraphQL', 'Git', 'Java', 'UI/UX Design, PowwerBI, Data Analysis',
+        Python, 'Powerapps', 'SharePoint', 'Microsoft 365', 'ICT Support',
+        'Network Administration', 'System Analysis', 'Project Management',
+
+    ],
+    hardWorker: true,
+    quickLearner: true,
+    problemSolver: true,
+    yearsOfExperience: 4, 
+    hireable: function() {
+        return (
+            this.hardWorker &&
+            this.problemSolver &&
+            this.skills.length >= 5 &&
+            this.yearsOfExperience >= 2
+        );
+    }
 };
   `);
 
@@ -174,7 +185,7 @@ const profile = {
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
                 <span className="text-gray-300 text-xs sm:text-sm font-medium">
-                  Welcome to my portfolio
+                  Welcome to my portifolio!
                 </span>
               </div>
 
@@ -207,7 +218,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  ICT & Data Systems Professional based in Kigali, Rwanda. Building technology that drives real organizational impact.
+                  Software Engineer 🚀 | Building Cool Staff 💻 | Lifelong Learner 
                 </p>
               </div>
 
