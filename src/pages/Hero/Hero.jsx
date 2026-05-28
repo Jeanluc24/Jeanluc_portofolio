@@ -239,7 +239,7 @@ const profile = {
 
                 {/* Contact Button */}
                 <a
-                  href="images/Jean_Luc_MUSENGAYEZU_Resume.pdf"
+                  href="images/Jean Luc Musengayezu_ Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Jean_Luc_MUSENGAYEZU_Resume.pdf"
